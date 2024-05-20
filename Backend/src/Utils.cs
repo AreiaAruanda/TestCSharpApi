@@ -47,21 +47,8 @@ public static class Utils
         //Get all users from the database
         //Arr usersInDb = SQLQueryOne("SELECT * FROM users");
         Arr usersInDb = SQLQuery("SELECT email FROM users");
-        Arr emailsInDb = usersInDb.Map(user => user.email);
-
-        // Only keep the mock users 
-        /*Arr mockUsersInDb = usersInDb.Filter(
-            usersInDb => emailsInDb.Contains(mockEmails));*/
-        
+        Arr emailsInDb = usersInDb.Map(user => user.email);        
         Arr successFullyRemovedUsers = Arr();
-        
-        /*foreach (var user in mockUsersInDb)
-        {
-            var result = SQLQueryOne(
-                @"DELETE * FROM users", user);
-            successFullyRemovedUsers.Push(user);
-        }
-        return successFullyRemovedUsers;*/
 
         foreach (var user in usersInDb)
         {
@@ -70,15 +57,7 @@ public static class Utils
             var removeThisRecords = SQLQueryOne(
             @"DELETE FROM users WHERE email = $email",
             new { email = user.email });  
-            
-            /*var removeThisRecord = SQLQueryOne(
-            @"DELETE FROM users WHERE email = user.email", 
-            user);*/
             successFullyRemovedUsers.Push(user);
-
-                /*var result = SQLQueryOne(
-                @"DELETE * FROM users", user);
-                successFullyRemovedUsers.Push(user);*/
             }
         }
         return successFullyRemovedUsers;
@@ -86,15 +65,20 @@ public static class Utils
 
     public static bool IsPasswordGoodEnough(string password)
     {
-        if (password.Length > 7 && password.Any(c => char.IsUpper(c)) && password.Any(c => char.IsLower(c)) && password.Any(c => char.IsDigit(c)) && password.Any(c => !char.IsLetterOrDigit(c)))
+        string passwordPattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$";
+
+        // Check if the input string matches the password pattern
+        if (Regex.IsMatch(password, passwordPattern))
         {
-         return true;   
+            Console.WriteLine("The password is strong enough.");
+            return true;
         }
         else
         {
-        return false;
+            Console.WriteLine("The password is not strong enough.");
+            return false;
         }
-    }
+    } 
 
     public static string[] ParseJsonToArray(string json)
     {
@@ -148,7 +132,6 @@ public static class Utils
             }
             else
             {
-            // If it doesn't, add it to the dictionary with a count of 1
             domainCounts[domain] = 1;
             }
         }
