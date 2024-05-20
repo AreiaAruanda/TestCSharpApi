@@ -87,6 +87,8 @@
 							"      \"userId\": 3,",
 							"      \"productId\": \"Gurka\"",
 							"    },",
+							"  ],",
+							"  \"userComments\": [",
 							"    {",
 							"      \"comment\": \"Awesome äpple\",",
 							"      \"userId\": 5,",
