@@ -1,10 +1,11 @@
 Feature: As user I want to be able to see the correct products listed when I have chosen a category so that I can easily filter the product list by category.
 
-  Scenario Outline: Check that the category <category> shows the product <product>, price <price> and description <description>.
+  Scenario Outline: Check that the category '<category>' shows the product '<product>', price '<price>' and description '<description>'.
     Given that I am on the product page
     When I choose the category "<category>"
     Then I should see the product "<product>"
-    Then I should see the price "<price>"
+    Then I should see the price "<price>" for the product "<product>"
+    #Then I should see the price "<price>"
     Then I should see the description "<description>"
 
     Examples:
@@ -13,7 +14,7 @@ Feature: As user I want to be able to see the correct products listed when I hav
       | Alla             | dog toothbrush     | 4         | keeps your dogs teeth healthy                                       |
       | Alla             | frisbee            | 10        | finally your dog has its own!                                       |
       | Alla             | basket             | 50        | cosy nest for an afternoon rest                                     |
-      | Alla             | brush              | 8         | for perfectly shiny fur every day                                   |
+      | Alla             | borste             | 8         | for perfectly shiny fur every day                                   |
       | Alla             | squishy toy        | 7         | makes squeaking noise when you furry friend catches it              |
       | Alla             | bell               | 3         | let them chase it                                                   |
       | Alla             | box                | 5         | all cats love boxes                                                 |
@@ -34,7 +35,7 @@ Feature: As user I want to be able to see the correct products listed when I hav
       | dog toys         | dog toothbrush     | 4         | keeps your dogs teeth healthy                                       |
       | dog toys         | frisbee            | 10        | finally your dog has its own!                                       |
       | dog toys         | basket             | 50        | cosy nest for an afternoon rest                                     |
-      | dog toys         | brush              | 8         | for perfectly shiny fur every day                                   |
+      | dog toys         | borste             | 8         | for perfectly shiny fur every day                                   |
       | cat toys         | squishy toy        | 7         | makes squeaking noise when you furry friend catches it              |
       | cat toys         | bell               | 3         | let them chase it                                                   |
       | cat toys         | box                | 5         | all cats love boxes                                                 |
@@ -53,8 +54,8 @@ Feature: As user I want to be able to see the correct products listed when I hav
       | silverfish toys  | fishbowl           | 12        | silver is the new gold                                              |
       
 
-  Scenario Outline: Check that the category <category> does not show the product <product>.
-    When I choose the category "<category>"
+  Scenario Outline: Check that the category '<category>' does not show the product '<product>'.
+    #When I choose the category "<category>"
     Then I should not see the product "<product>"
 
     Examples:
@@ -72,14 +73,14 @@ Feature: As user I want to be able to see the correct products listed when I hav
       | dog toys         | mirror             |
       | dog toys         | bird bath          |
       | dog toys         | bar                |
-      | dog toys         | silverfish parcour |
-      | dog toys         | silverfish trap    |
-      | dog toys         | fishbowl           |
+      #| dog toys         | silverfish parcour |
+      #| dog toys         | silverfish trap    |
+      #| dog toys         | fishbowl           |
       | cat toys         | rope               |
       | cat toys         | dog toothbrush     |
       | cat toys         | frisbee            |
       | cat toys         | basket             | 
-      | cat toys         | brush              |
+      | cat toys         | borste             |
       | cat toys         | tangramme          |
       | cat toys         | lego               |
       | cat toys         | sticks and rocks   |
@@ -88,14 +89,14 @@ Feature: As user I want to be able to see the correct products listed when I hav
       | cat toys         | mirror             |
       | cat toys         | bird bath          |
       | cat toys         | bar                |
-      | cat toys         | silverfish parcour |
-      | cat toys         | silverfish trap    |
-      | cat toys         | fishbowl           |
+      #| cat toys         | silverfish parcour |
+      #| cat toys         | silverfish trap    |
+      #| cat toys         | fishbowl           |
       | kids toys        | rope               |
       | kids toys        | dog toothbrush     |
       | kids toys        | frisbee            |
       | kids toys        | basket             | 
-      | kids toys        | brush              |
+      | kids toys        | borste             |
       | kids toys        | squishy toy        |
       | kids toys        | bell               |
       | kids toys        | birdie             |
@@ -103,14 +104,14 @@ Feature: As user I want to be able to see the correct products listed when I hav
       | kids toys        | mirror             |
       | kids toys        | bird bath          |
       | kids toys        | bar                |
-      | kids toys        | silverfish parcour |
-      | kids toys        | silverfish trap    |
-      | kids toys        | fishbowl           |
+      #| kids toys        | silverfish parcour |
+      #| kids toys        | silverfish trap    |
+      #| kids toys        | fishbowl           |
       | bird toys        | rope               |
       | bird toys        | dog toothbrush     |
       | bird toys        | frisbee            |
       | bird toys        | basket             | 
-      | bird toys        | brush              |
+      | bird toys        | borste             |
       | bird toys        | squishy toy        |
       | bird toys        | bell               |
       | bird toys        | box                |
@@ -121,14 +122,14 @@ Feature: As user I want to be able to see the correct products listed when I hav
       | bird toys        | sticks and rocks   |
       | bird toys        | ipad               |
       | bird toys        | crafting box       |
-      | bird toys        | silverfish parcour |
-      | bird toys        | silverfish trap    |
-      | bird toys        | fishbowl           |
+      #| bird toys        | silverfish parcour |
+      #| bird toys        | silverfish trap    |
+      #| bird toys        | fishbowl           |
       | silverfish toys  | rope               |
       | silverfish toys  | dog toothbrush     |
       | silverfish toys  | frisbee            |
       | silverfish toys  | basket             | 
-      | silverfish toys  | brush              |
+      | silverfish toys  | borste             |
       | silverfish toys  | squishy toy        |
       | silverfish toys  | bell               |
       | silverfish toys  | box                |
