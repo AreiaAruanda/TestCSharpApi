@@ -12,7 +12,7 @@ Then('I should see the product {string}', (productName) => {
   cy.get('.product .name').contains(productName);
 });
 
-Then('I should see the price {int}', (price) => {
+Then('I should see the price {string}', (price) => {
   cy.get('.product .price').contains(price);
 });
 

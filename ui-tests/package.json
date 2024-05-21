@@ -8,6 +8,7 @@
     "json": {
       "enabled": true
     },
+    
     "stepDefinitions": [
       "/specs/step_definitions/*.js"
     ]

@@ -8,49 +8,49 @@ Feature: As user I want to be able to see the correct products listed when I hav
     Then I should see the description "<description>"
 
     Examples:
-      | category         | product            | price 
-      | Alla             | rope               |
-      | Alla             | dog toothbrush     |
-      | Alla             | frisbee            |
-      | Alla             | basket             |
-      | Alla             | brush              |
-      | Alla             | squishy toy        |
-      | Alla             | bell               |
-      | Alla             | box                |
-      | Alla             | birdie             |
-      | Alla             | spray bottle       |
-      | Alla             | tangramme          |
-      | Alla             | lego               |
-      | Alla             | sticks and rocks   |
-      | Alla             | ipad               |
-      | Alla             | crafting box       |
-      | Alla             | mirror             |
-      | Alla             | bird bath          |
-      | Alla             | bar                |
-      | Alla             | silverfish parcour |
-      | Alla             | silverfish trap    |
-      | Alla             | fishbowl           |
-      | dog toys         | rope               |
-      | dog toys         | dog toothbrush     |
-      | dog toys         | frisbee            |
-      | dog toys         | basket             |
-      | dog toys         | brush              |
-      | cat toys         | squishy toy        |
-      | cat toys         | bell               |
-      | cat toys         | box                |
-      | cat toys         | birdie             |
-      | cat toys         | spray bottle       |
-      | kids toys        | tangramme          |
-      | kids toys        | lego               |
-      | kids toys        | sticks and rocks   |
-      | kids toys        | ipad               |
-      | kids toys        | crafting box       |
-      | bird toys        | mirror             |
-      | bird toys        | bird bath          |
-      | bird toys        | bar                |
-      | silverfish toys  | silverfish parcour |
-      | silverfish toys  | silverfish trap    |
-      | silverfish toys  | fishbowl           |
+      | category         | product            | price     | description                                                         |
+      | Alla             | rope               | 5         | tug of war for medium-sized dogs -wear them out and make them tired |
+      | Alla             | dog toothbrush     | 4         | keeps your dogs teeth healthy                                       |
+      | Alla             | frisbee            | 10        | finally your dog has its own!                                       |
+      | Alla             | basket             | 50        | cosy nest for an afternoon rest                                     |
+      | Alla             | brush              | 8         | for perfectly shiny fur every day                                   |
+      | Alla             | squishy toy        | 7         | makes squeaking noise when you furry friend catches it              |
+      | Alla             | bell               | 3         | let them chase it                                                   |
+      | Alla             | box                | 5         | all cats love boxes                                                 |
+      | Alla             | birdie             | 50        | challenge your cat with this lively singing bird                    |
+      | Alla             | spray bottle       | 6         | try it out, it works!                                               |
+      | Alla             | tangramme          | 10        | create exact shapes with what you get and figure it out             |
+      | Alla             | lego               | 20        | increases creativity                                                |
+      | Alla             | sticks and rocks   | 100       | let them figure out somtething fun with it                          |
+      | Alla             | ipad               | 800       | your digital babysitter                                             |
+      | Alla             | crafting box       | 35        | create without limitations                                          |
+      | Alla             | mirror             | 5         | your lonely bird's best friend                                      |
+      | Alla             | bird bath          | 15        | splashing fun for your birdie                                       |
+      | Alla             | bar                | 6         | made of real amazonian twigs to make'em feel just like home         |
+      | Alla             | silverfish parcour | 4         | makes them strong and fit                                           |
+      | Alla             | silverfish trap    | 5         | catch that dusty bugger                                             |
+      | Alla             | fishbowl           | 12        | silver is the new gold                                              |
+      | dog toys         | rope               | 5         | tug of war for medium-sized dogs -wear them out and make them tired |
+      | dog toys         | dog toothbrush     | 4         | keeps your dogs teeth healthy                                       |
+      | dog toys         | frisbee            | 10        | finally your dog has its own!                                       |
+      | dog toys         | basket             | 50        | cosy nest for an afternoon rest                                     |
+      | dog toys         | brush              | 8         | for perfectly shiny fur every day                                   |
+      | cat toys         | squishy toy        | 7         | makes squeaking noise when you furry friend catches it              |
+      | cat toys         | bell               | 3         | let them chase it                                                   |
+      | cat toys         | box                | 5         | all cats love boxes                                                 |
+      | cat toys         | birdie             | 50        | challenge your cat with this lively singing bird                    |  
+      | cat toys         | spray bottle       | 6         | try it out, it works!                                               |
+      | kids toys        | tangramme          | 10        | create exact shapes with what you get and figure it out             |
+      | kids toys        | lego               | 20        | increases creativity                                                |
+      | kids toys        | sticks and rocks   | 100       | let them figure out somtething fun with it                          |
+      | kids toys        | ipad               | 800       | your digital babysitter                                             |
+      | kids toys        | crafting box       | 35        | create without limitations                                          |
+      | bird toys        | mirror             | 5         | your lonely bird's best friend                                      |
+      | bird toys        | bird bath          | 15        | splashing fun for your birdie                                       |
+      | bird toys        | bar                | 6         | made of real amazonian twigs to make'em feel just like home         |
+      | silverfish toys  | silverfish parcour | 4         | makes them strong and fit                                           |
+      | silverfish toys  | silverfish trap    | 5         | catch that dusty bugger                                             |
+      | silverfish toys  | fishbowl           | 12        | silver is the new gold                                              |
       
 
   Scenario Outline: Check that the category <category> does not show the product <product>.
