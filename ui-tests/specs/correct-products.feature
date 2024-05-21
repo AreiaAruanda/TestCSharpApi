@@ -7,6 +7,27 @@ Feature: As user I want to be able to see the correct products listed when I hav
 
     Examples:
       | category         | product            |
+      | Alla             | rope               |
+      | Alla             | dog toothbrush     |
+      | Alla             | frisbee            |
+      | Alla             | basket             |
+      | Alla             | brush              |
+      | Alla             | squishy toy        |
+      | Alla             | bell               |
+      | Alla             | box                |
+      | Alla             | birdie             |
+      | Alla             | spray bottle       |
+      | Alla             | tangramme          |
+      | Alla             | lego               |
+      | Alla             | sticks and rocks   |
+      | Alla             | ipad               |
+      | Alla             | crafting box       |
+      | Alla             | mirror             |
+      | Alla             | bird bath          |
+      | Alla             | bar                |
+      | Alla             | silverfish parcour |
+      | Alla             | silverfish trap    |
+      | Alla             | fishbowl           |
       | dog toys         | rope               |
       | dog toys         | dog toothbrush     |
       | dog toys         | frisbee            |
