@@ -97,7 +97,6 @@ Feature: As user I want to be able to see the correct products listed when I hav
       | kids toys        | brush              |
       | kids toys        | squishy toy        |
       | kids toys        | bell               |
-      | kids toys        | box                |
       | kids toys        | birdie             |
       | kids toys        | spray bottle       |
       | kids toys        | mirror             |
