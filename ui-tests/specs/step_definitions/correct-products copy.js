@@ -12,14 +12,6 @@ Then('I should see the product {string}', (productName) => {
   cy.get('.product .name').contains(productName);
 });
 
-Then('I should see the price {int}', (price) => {
-  cy.get('.product .price').contains(price);
-});
-
-Then('I should see the description {string}', (description) => {
-  cy.get('.product .description').contains(description);
-});
-
 Then('I should not see the product {string}', (productName) => {
   cy.get('.product .name').should('not.include.text', productName);
 });
